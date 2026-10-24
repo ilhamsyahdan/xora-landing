@@ -21,6 +21,7 @@ const Header = () => {
     <LinkScroll
       onClick={() => setOpen(false)}
       to={title}
+      href={`#${title}`}
       spy
       smooth
       offset={-100}
@@ -34,12 +35,12 @@ const Header = () => {
     <header
       className={clsx(
         "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500",
-        hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]"
+        hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]",
       )}
     >
       <div className="container h-14 flex items-center max-lg:px-5">
         <div className="flex-1 cursor-pointer z-2 lg:hidden">
-          <a>
+          <a href="/">
             <img
               src="/images/xora.svg"
               alt="xora"
@@ -52,7 +53,7 @@ const Header = () => {
         <div
           className={clsx(
             "w-full max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
-            open ? "max-lg:opacity-100" : "max-lg:pointer-events-none"
+            open ? "max-lg:opacity-100" : "max-lg:pointer-events-none",
           )}
         >
           <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
@@ -66,11 +67,12 @@ const Header = () => {
                 <li className="nav-logo">
                   <LinkScroll
                     to="hero"
+                    href="#hero"
                     offset={-250}
                     spy
                     smooth
                     className={clsx(
-                      "max-lg:hidden transition-transform duration-500 cursor-pointer"
+                      "max-lg:hidden transition-transform duration-500 cursor-pointer",
                     )}
                   >
                     <img
@@ -95,12 +97,14 @@ const Header = () => {
                 width={960}
                 height={380}
                 className="relative z-2"
+                alt="image"
               />
               <img
                 src="/images/bg-outlines-fill.svg"
                 width={960}
                 height={380}
                 className="absolute inset-0 mix-blend-soft-light opacity-5"
+                alt="image"
               />
             </div>
           </div>

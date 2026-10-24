@@ -5,7 +5,7 @@ const TestimonialsItem = ({ item, containerClassName }) => {
     <div
       className={clsx(
         "relative px-14 pb-14 pt-11 after:absolute after:bottom-0 after:right-0 after:h-0.5 after:w-screen after:bg-s2 after:content-[''] max-md:px-0 max-md:pt-11 after:mx-md:-right-4",
-        containerClassName
+        containerClassName,
       )}
     >
       <blockquote className="h6 mb-8 text-p4">{item.comment}</blockquote>
@@ -19,7 +19,7 @@ const TestimonialsItem = ({ item, containerClassName }) => {
         </div>
         <div>
           <h4 className="body-2 mb-0.5 text-p1">{item.name}</h4>
-          <p className="small-compact uppercase text-s3">{item.role}</p>
+          <p className="small-compact uppercase text-p3">{item.role}</p>
         </div>
       </div>
     </div>
