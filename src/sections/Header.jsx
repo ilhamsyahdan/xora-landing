@@ -100,7 +100,7 @@ const Header = () => {
                 alt="image"
               />
               <img
-                src="/images/bg-outlines-fill.svg"
+                src="/images/bg-outlines-fill.png"
                 width={960}
                 height={380}
                 className="absolute inset-0 mix-blend-soft-light opacity-5"
